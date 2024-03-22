@@ -19,7 +19,7 @@ const Navbar = () => {
                 <Typography>Health Plans</Typography>
                 <Typography>Medicine</Typography>
                 <Typography>Diagnostics</Typography>
-                <Typography>NGO</Typography>
+                <Typography>NGOs</Typography>
             </Stack>
             <Button>LOGIN</Button>
             </Stack>
