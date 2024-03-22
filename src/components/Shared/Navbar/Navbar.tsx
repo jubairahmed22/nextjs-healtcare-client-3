@@ -1,9 +1,19 @@
+import { Box, Container, Stack, Typography } from "@mui/material";
 
 const Navbar = () => {
     return (
-        <div>
-            this is navbar
-        </div>
+        <Container>
+            <Stack py={2}
+            direction="row" 
+            justifyContent="space-between"
+            >
+                <Typography variant="h5" component="h1"
+                fontWeight={600}
+                >
+                    P<Box component="span" color="primary.main">H</Box> Health Care
+                </Typography>
+            </Stack>
+        </Container>
     );
 };
 
