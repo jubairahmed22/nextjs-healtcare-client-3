@@ -8,7 +8,7 @@ const HeroSection = () => {
       sx={{
         display: "flex",
         direction: "row",
-        my: 8,
+        my: 16,
       }}
     >
       <Box sx={{ flex: 1, position: "relative" }}>
