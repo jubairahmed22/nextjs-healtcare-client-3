@@ -14,7 +14,7 @@ const Footer = () => {
           <Typography color="#fff" component={Link} href="/consultation">
             Consultation
           </Typography>
-          <Typography color="#fff">Health Plans</Typography>
+          <Typography color="#fff">Health</Typography>
           <Typography color="#fff">Medicine</Typography>
           <Typography color="#fff">Diagnostics</Typography>
           <Typography color="#fff">NGOs</Typography>
