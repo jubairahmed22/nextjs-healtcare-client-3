@@ -48,7 +48,7 @@ const Footer = () => {
             <Box component="span" color="primary.main">
               H
             </Box>{" "}
-            Health 
+            Health Care
           </Typography>
           <Typography component="p" color="white">
             Privacy Policy! Terms & Conditions
