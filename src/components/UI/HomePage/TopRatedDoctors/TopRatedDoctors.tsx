@@ -10,6 +10,7 @@ import {
     Typography,
   } from "@mui/material";
   import Image from "next/image";
+  import LocationOnIcon from "@mui/icons-material/LocationOn";
   
   const TopRatedDoctors = async () => {
     const res = await fetch("http://localhost:5000/api/v1/doctor?page=1&limit=3");
@@ -57,7 +58,7 @@ import {
                       {doctor.qualification}, {doctor.designation}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" mt={1}>
-                      {doctor.address}
+                      <LocationOnIcon /> {doctor.address}
                     </Typography>
                   </CardContent>
                   <CardActions
