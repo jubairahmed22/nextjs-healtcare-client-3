@@ -25,7 +25,7 @@ const HeroSection = () => {
         <Typography variant="h2" component="h1" fontWeight={600}>
           Healthier Hearts
         </Typography>
-        <Typography variant="h2" component="h1" fontWeight={600}>
+        <Typography variant="h2" component="h1" fontWeight={400}>
           Come From
         </Typography>
         <Typography
