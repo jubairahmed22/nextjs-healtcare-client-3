@@ -47,11 +47,17 @@ const WhyUs = () => {
             Why Choose Us
           </Typography>
         </Box>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} my={5}>
           <Grid item md={6}>
-            <Box>
-              <Box>
-                <Image src={servicesData[0].imageSrc} width={80} alt="award" />
+            <Box sx={{display: "flex", gap: "15px", backgroundColor: "rgba(245, 245, 245, 1)", padding:"15px", alignItems: "center",
+            borderRadius: "10px 10px 100px 10px"
+           }}>
+              <Box sx={{
+                backgroundColor: "#fff",
+                padding: "10px",
+                borderRadius: "10px"
+              }}>
+                <Image src={servicesData[0].imageSrc} width={50} alt="award" />
               </Box>
               <Box>
                 <Typography variant="h6" component="h6" fontWeight={600}>
