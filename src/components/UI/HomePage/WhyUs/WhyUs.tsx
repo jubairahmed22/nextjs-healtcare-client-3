@@ -1,5 +1,7 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import assets from "@/assets";
+import chooseUsImg from "@/assets/choose-us.png"
+import Image from "next/image";
 
 const servicesData = [
   {
@@ -45,6 +47,12 @@ const WhyUs = () => {
             Why Choose Us
           </Typography>
         </Box>
+        <Grid container spacing={2}>
+            <Grid item md={6}></Grid>
+            <Grid item md={6}>
+                <Image src={chooseUsImg} alt="chooseUsPage"></Image>
+            </Grid>
+        </Grid>
       </Box>
     </Container>
   );
