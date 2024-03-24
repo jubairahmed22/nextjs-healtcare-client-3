@@ -115,7 +115,7 @@ const WhyUs = () => {
               <Box sx={{
                 backgroundColor: "#fff",
                 padding: "10px",
-                borderRadius: "16px"
+                borderRadius: "10px"
               }}>
                 <Image src={servicesData[3].imageSrc} width={50} alt="award" />
               </Box>
