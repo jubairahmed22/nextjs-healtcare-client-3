@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   Grid,
   Stack,
@@ -78,7 +79,30 @@ const registerPage = () => {
                     fullWidth={true}
                   />
                 </Grid>
+                <Grid item md={6}>
+                  <TextField
+                    label="Contact Number"
+                    type="tel"
+                    variant="outlined"
+                    size="small"
+                    fullWidth={true}
+                  />
+                </Grid>
+                <Grid item md={6}>
+                  <TextField
+                    label="Address"
+                    type="text"
+                    variant="outlined"
+                    size="small"
+                    fullWidth={true}
+                  />
+                </Grid>
               </Grid>
+              <Button sx={{
+                margin: "10px 0px"
+              }} fullWidth={true}>
+                Register
+              </Button>
             </Box>
           </Box>
         </Stack>
