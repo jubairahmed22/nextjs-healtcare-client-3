@@ -15,12 +15,11 @@ const registerPage = () => {
   return (
     <div>
       <Container
-        sx={{
-          padding: "50px",
-        }}
+      
       >
         <Stack
           sx={{
+            height: "100vh",
             justifyContent: "center",
             alignItems: "center",
           }}
