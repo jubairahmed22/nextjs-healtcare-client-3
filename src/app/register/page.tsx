@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import assets from "@/assets";
 import Image from "next/image";
+import Link from "next/link";
 
 const registerPage = () => {
   return (
@@ -31,6 +32,7 @@ const registerPage = () => {
               boxShadow: 1,
               borderRadius: 1,
               p: 4,
+              textAlign: "center"
             }}
           >
             <Stack
@@ -103,6 +105,9 @@ const registerPage = () => {
               }} fullWidth={true}>
                 Register
               </Button>
+              <Typography component="p" fontWeight={300}>
+                Do you already have an account? <Link href="/login">Login</Link>
+               </Typography>
             </Box>
           </Box>
         </Stack>
