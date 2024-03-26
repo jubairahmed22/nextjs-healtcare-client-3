@@ -52,8 +52,8 @@ const registerPage = () => {
                 </Typography>
               </Box>
             </Stack>
+            <form>
             <Box>
-              <form>
               <Grid container spacing={2} my={1}>
                 <Grid item md={12}>
                   <TextField
@@ -100,7 +100,6 @@ const registerPage = () => {
                   />
                 </Grid>
               </Grid>
-              </form>
               <Button sx={{
                 margin: "10px 0px"
               }} fullWidth={true}>
@@ -110,6 +109,7 @@ const registerPage = () => {
                 Do you already have an account? <Link href="/login">Login</Link>
                </Typography>
             </Box>
+            </form>
           </Box>
         </Stack>
       </Container>
