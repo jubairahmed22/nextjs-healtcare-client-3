@@ -49,8 +49,8 @@ const LoginPage = () => {
               </Typography>
             </Box>
           </Stack>
+          <form>
           <Box>
-            <form>
               <Grid container spacing={2} my={1}>
                
                 <Grid item md={6}>
@@ -73,7 +73,9 @@ const LoginPage = () => {
                 </Grid>
                
               </Grid>
-            </form>
+            <Typography mb={1} textAlign="end" component="p" fontWeight={300}>
+              Forgot Password?
+            </Typography>
             <Button
               sx={{
                 margin: "10px 0px",
@@ -86,6 +88,8 @@ const LoginPage = () => {
               Don&apos;t have an account? <Link href="/register">Create an account</Link>
             </Typography>
           </Box>
+          </form>
+          
         </Box>
       </Stack>
     </Container>
