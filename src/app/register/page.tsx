@@ -51,11 +51,28 @@ const registerPage = () => {
               </Box>
             </Stack>
             <Box>
-              <Grid container spacing={2}>
+              <Grid container spacing={2} my={1}>
                 <Grid item md={12}>
                   <TextField
-                    id="outlined-basic"
-                    label="Outlined"
+                    label="Name"
+                    variant="outlined"
+                    size="small"
+                    fullWidth={true}
+                  />
+                </Grid>
+                <Grid item md={6}>
+                  <TextField
+                    label="Email"
+                    type="email"
+                    variant="outlined"
+                    size="small"
+                    fullWidth={true}
+                  />
+                </Grid>
+                <Grid item md={6}>
+                  <TextField
+                    label="Password"
+                    type="password"
                     variant="outlined"
                     size="small"
                     fullWidth={true}
