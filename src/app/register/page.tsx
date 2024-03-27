@@ -16,8 +16,11 @@ import Link from "next/link";
 import { useForm, SubmitHandler } from "react-hook-form"
 
 type Inputs = {
-  example: string
-  exampleRequired: string
+  name: string;
+  email: string;
+  password: string;
+  contactNumber:string;
+  address: string
 }
 
 
@@ -29,7 +32,7 @@ const registerPage = () => {
     watch,
     formState: { errors },
   } = useForm<Inputs>()
-  
+
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
 
   return (
@@ -81,7 +84,7 @@ const registerPage = () => {
                     variant="outlined"
                     size="small"
                     fullWidth={true}
-                    {...register("example")}
+                    {...register("name")}
                   />
                 </Grid>
                 <Grid item md={6}>
@@ -91,6 +94,8 @@ const registerPage = () => {
                     variant="outlined"
                     size="small"
                     fullWidth={true}
+                    {...register("email")}
+
                   />
                 </Grid>
                 <Grid item md={6}>
@@ -100,6 +105,8 @@ const registerPage = () => {
                     variant="outlined"
                     size="small"
                     fullWidth={true}
+                    {...register("password")}
+
                   />
                 </Grid>
                 <Grid item md={6}>
@@ -109,6 +116,8 @@ const registerPage = () => {
                     variant="outlined"
                     size="small"
                     fullWidth={true}
+                    {...register("contact number")}
+
                   />
                 </Grid>
                 <Grid item md={6}>
@@ -118,6 +127,7 @@ const registerPage = () => {
                     variant="outlined"
                     size="small"
                     fullWidth={true}
+                    {...register("address")}
                   />
                 </Grid>
               </Grid>
