@@ -1,3 +1,4 @@
+"use client"
 import {
   Box,
   Button,
@@ -7,11 +8,29 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+
 import assets from "@/assets";
 import Image from "next/image";
 import Link from "next/link";
 
+import { useForm, SubmitHandler } from "react-hook-form"
+
+type Inputs = {
+  example: string
+  exampleRequired: string
+}
+
+
 const registerPage = () => {
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>()
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+
   return (
     <div>
       <Container
