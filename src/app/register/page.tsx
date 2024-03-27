@@ -119,7 +119,7 @@ const registerPage = () => {
 
                   />
                 </Grid>
-                <Grid item md={6}>
+                <Grid item md={4}>
                   <TextField
                     label="Contact Number"
                     type="tel"
