@@ -29,6 +29,7 @@ const registerPage = () => {
     watch,
     formState: { errors },
   } = useForm<Inputs>()
+  
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
 
   return (
@@ -71,8 +72,8 @@ const registerPage = () => {
                 </Typography>
               </Box>
             </Stack>
-            <form>
             <Box>
+              <form  onSubmit={handleSubmit(onSubmit)}>
               <Grid container spacing={2} my={1}>
                 <Grid item md={12}>
                   <TextField
@@ -80,6 +81,7 @@ const registerPage = () => {
                     variant="outlined"
                     size="small"
                     fullWidth={true}
+                    {...register("example")}
                   />
                 </Grid>
                 <Grid item md={6}>
@@ -121,14 +123,16 @@ const registerPage = () => {
               </Grid>
               <Button sx={{
                 margin: "10px 0px"
-              }} fullWidth={true}>
+              }} fullWidth={true} 
+              type="submit"
+              >
                 Register
               </Button>
               <Typography component="p" fontWeight={300}>
                 Do you already have an account? <Link href="/login">Login</Link>
                </Typography>
+              </form>
             </Box>
-            </form>
           </Box>
         </Stack>
       </Container>
