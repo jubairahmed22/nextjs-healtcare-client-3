@@ -15,12 +15,17 @@ import Link from "next/link";
 
 import { useForm, SubmitHandler } from "react-hook-form"
 
-type Inputs = {
+
+interface IPatientData{
   name: string;
   email: string;
-  password: string;
   contactNumber:string;
   address: string
+}
+
+interface IPatientRegisterFormData{
+  password: string;
+  patient: IPatientData
 }
 
 
@@ -31,9 +36,9 @@ const registerPage = () => {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<Inputs>()
+  } = useForm<IPatientRegisterFormData>()
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  const onSubmit: SubmitHandler<IPatientRegisterFormData> = (data) => console.log(data)
 
   return (
     <div>
@@ -84,7 +89,7 @@ const registerPage = () => {
                     variant="outlined"
                     size="small"
                     fullWidth={true}
-                    {...register("name")}
+                    {...register("patient.name")}
                   />
                 </Grid>
                 <Grid item md={6}>
@@ -94,7 +99,7 @@ const registerPage = () => {
                     variant="outlined"
                     size="small"
                     fullWidth={true}
-                    {...register("email")}
+                    {...register("patient.email")}
 
                   />
                 </Grid>
@@ -116,7 +121,7 @@ const registerPage = () => {
                     variant="outlined"
                     size="small"
                     fullWidth={true}
-                    {...register("contact number")}
+                    {...register("patient.contactNumber")}
 
                   />
                 </Grid>
@@ -127,7 +132,7 @@ const registerPage = () => {
                     variant="outlined"
                     size="small"
                     fullWidth={true}
-                    {...register("address")}
+                    {...register("patient.address")}
                   />
                 </Grid>
               </Grid>
