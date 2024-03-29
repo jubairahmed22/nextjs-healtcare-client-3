@@ -69,7 +69,7 @@ const registerPage = () => {
           >
             <Stack
               sx={{
-                justifyContent: "right",
+                justifyContent: "center",
                 alignItems: "center",
               }}
             >
