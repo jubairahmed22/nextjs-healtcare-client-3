@@ -90,7 +90,7 @@ const registerPage = () => {
               <Grid container spacing={2} my={1}>
                 <Grid item md={12}>
                   <TextField
-                    label="Na"
+                    label="Name"
                     variant="outlined"
                     size="small"
                     fullWidth={true}
