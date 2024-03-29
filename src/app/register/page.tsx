@@ -132,7 +132,7 @@ const registerPage = () => {
                 </Grid>
                 <Grid item md={6}>
                   <TextField
-                    label="Address"
+                    label="Add"
                     type="text"
                     variant="outlined"
                     size="small"
