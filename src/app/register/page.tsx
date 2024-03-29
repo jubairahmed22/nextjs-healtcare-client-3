@@ -90,7 +90,7 @@ const registerPage = () => {
               <Grid container spacing={2} my={1}>
                 <Grid item md={12}>
                   <TextField
-                    label="Name"
+                    label="Na"
                     variant="outlined"
                     size="small"
                     fullWidth={true}
@@ -149,7 +149,7 @@ const registerPage = () => {
                 Register
               </Button>
               <Typography component="p" fontWeight={300}>
-                Do you already  an account? <Link href="/login">Login</Link>
+                Do you already have an account? <Link href="/login">Login</Link>
                </Typography>
               </form>
             </Box>
