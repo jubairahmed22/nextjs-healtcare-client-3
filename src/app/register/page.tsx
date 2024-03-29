@@ -59,7 +59,7 @@ const registerPage = () => {
         >
           <Box
             sx={{
-              maxWidth: 600,
+              maxWidth: 60,
               width: "100%",
               boxShadow: 1,
               borderRadius: 1,
