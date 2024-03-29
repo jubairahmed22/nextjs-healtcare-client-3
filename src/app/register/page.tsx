@@ -108,7 +108,7 @@ const registerPage = () => {
 
                   />
                 </Grid>
-                <Grid item md={6}>
+                <Grid item md={2}>
                   <TextField
                     label="Password"
                     type="password"
