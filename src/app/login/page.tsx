@@ -34,7 +34,7 @@ const LoginPage = () => {
     try {
       const res = await userLogin(values);
       if(res?.data?.accessToken){
-         storeUserInfo(res?.data?.accessToken)
+         storeUserInfo({ accessToken : res?.data?.accessToken})
       }      
     }
     catch (err: any) {
