@@ -78,7 +78,7 @@ const LoginPage = () => {
             </Typography>
             <Button
               sx={{
-                margin: "10px 0px",
+                margin: "10px 10px",
               }}
               fullWidth={true}
             >
