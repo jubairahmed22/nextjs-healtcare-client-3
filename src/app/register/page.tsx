@@ -15,6 +15,7 @@ import Link from "next/link";
 
 import { useForm, SubmitHandler } from "react-hook-form"
 import { modifyPayload } from "@/utils/modifyPayload";
+import { registerPatient } from "@/services/actions/registerPatient";
 
 
 interface IPatientData{
@@ -39,9 +40,18 @@ const registerPage = () => {
     formState: { errors },
   } = useForm<IPatientRegisterFormData>()
 
-  const onSubmit: SubmitHandler<IPatientRegisterFormData> = (values) => {
+  const onSubmit: SubmitHandler<IPatientRegisterFormData> = async(values) => {
     const data = modifyPayload(values);
-    console.log(data);
+    // console.log(data);
+    try {
+      const res = await registerPatient(data);
+      console.log(res);
+      
+    }
+    catch (err: any) {
+      console.log(err.message);
+      
+    }
     
   };
 
