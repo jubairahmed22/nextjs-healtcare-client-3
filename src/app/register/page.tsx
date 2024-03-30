@@ -101,7 +101,7 @@ const registerPage = () => {
               </Box>
             </Stack>
             <Box>
-              <form  onSubmit={handleSubmit(onSubmit)}>
+              <form onSubmit={handleSubmit(onSubmit)}>
               <Grid container spacing={2} my={1}>
                 <Grid item md={12}>
                   <TextField
