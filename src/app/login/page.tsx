@@ -30,7 +30,7 @@ const LoginPage = () => {
   } = useForm<FormValues>()
 
   const onSubmit: SubmitHandler<FormValues> = async(values) => {
-  //  console.log(value);
+  //  console.log(values);
     try {
       const res = await userLogin(values);
       if(res?.data?.accessToken){
