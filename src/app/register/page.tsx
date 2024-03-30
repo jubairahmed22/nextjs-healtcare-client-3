@@ -62,7 +62,7 @@ const registerPage = () => {
               maxWidth: 600,
               width: "100%",
               boxShadow: 1,
-              borderRadius: 5,
+              borderRadius: 1,
               p: 4,
               textAlign: "center"
             }}
