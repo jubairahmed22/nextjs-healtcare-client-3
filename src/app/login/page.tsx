@@ -54,7 +54,7 @@ const LoginPage = () => {
       >
         <Box
           sx={{
-            maxWidth: 60,
+            maxWidth: 600,
             width: "100%",
             boxShadow: 1,
             borderRadius: 1,
