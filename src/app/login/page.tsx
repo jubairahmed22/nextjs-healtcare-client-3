@@ -48,7 +48,7 @@ const LoginPage = () => {
       <Stack
         sx={{
           height: "100vh",
-          justifyContent: "center",
+          justifyContent: "right",
           alignItems: "center",
         }}
       >
