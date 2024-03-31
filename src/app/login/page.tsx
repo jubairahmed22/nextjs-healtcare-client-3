@@ -49,7 +49,7 @@ const LoginPage = () => {
         sx={{
           height: "100vh",
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "right",
         }}
       >
         <Box
