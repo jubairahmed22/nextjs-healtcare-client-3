@@ -11,7 +11,7 @@ const Navbar = () => {
         <Container>
             <Stack py={2}
             direction="row" 
-            justifyContent="space-between"
+            justifyContent="space-betwee"
             alignItems="center"
             >
                 <Typography variant="h5" component={Link} href="/"
