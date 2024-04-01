@@ -33,8 +33,11 @@ const Navbar = () => {
                 <Typography component={Link} href="/">Diagnostics</Typography>
                 <Typography component={Link} href="/">NGOs</Typography>
             </Stack>
-            <Button component={Link} href="/login">LOGIN</Button>
+            { userInfo.userId ? 
             <Button  color="error">LOGOUT</Button>
+            :
+            <Button component={Link} href="/login">LOGIN</Button>
+            }
             </Stack>
         </Container>
     );
