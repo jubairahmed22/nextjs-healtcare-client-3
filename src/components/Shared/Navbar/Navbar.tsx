@@ -7,12 +7,9 @@ const Navbar = () => {
 
     const userInfo = getUserInfo();
 
-    
-
     // console.log(userInfo);
     // console.log(isLoggedIn());
 
-    
     return (
         <Container>
             <Stack py={2}
@@ -33,7 +30,7 @@ const Navbar = () => {
                 <Typography component={Link} href="/">Diagnostics</Typography>
                 <Typography component={Link} href="/">NGOs</Typography>
             </Stack>
-            { userInfo.userId ? 
+            { userInfo?.userId ? 
             <Button  color="error">LOGOUT</Button>
             :
             <Button component={Link} href="/login">LOGIN</Button>
