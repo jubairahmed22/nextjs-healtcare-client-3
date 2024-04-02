@@ -94,7 +94,7 @@ const LoginPage = () => {
                 </Grid>
                 <Grid item md={6}>
                   <TextField
-                    label="Passwo"
+                    label="Password"
                     type="password"
                     variant="outlined"
                     size="small"
