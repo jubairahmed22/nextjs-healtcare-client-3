@@ -123,7 +123,7 @@ const registerPage = () => {
                 <Grid item md={6}>
                   <TextField
                     label="Email"
-                    type="emai"
+                    type="email"
                     variant="outlined"
                     size="small"
                     fullWidth={true}
