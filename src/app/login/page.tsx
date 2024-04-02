@@ -106,7 +106,7 @@ const LoginPage = () => {
                
               </Grid>
             <Typography mb={1} textAlign="end" component="p" fontWeight={300}>
-              Forgot Password
+              Forgot Password?
             </Typography>
             <Button
               sx={{
