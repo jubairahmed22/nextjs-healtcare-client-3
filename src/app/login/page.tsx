@@ -99,7 +99,7 @@ const LoginPage = () => {
                     variant="outlined"
                     size="small"
                     fullWidth={true}
-                    {...registe("password")}
+                    {...register("password")}
 
                   />
                 </Grid>
