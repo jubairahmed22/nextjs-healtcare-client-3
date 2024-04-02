@@ -111,7 +111,7 @@ const registerPage = () => {
             <Box>
               <form onSubmit={handleSubmit(onSubmit)}>
               <Grid container spacing={2} my={1}>
-                <Grid item md={12}>
+                <Grid item md={1}>
                   <TextField
                     label="Name"
                     variant="outlined"
