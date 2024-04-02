@@ -110,7 +110,7 @@ const LoginPage = () => {
             </Typography>
             <Button
               sx={{
-                margin: "1px 0px",
+                margin: "10px 0px",
               }}
               fullWidth={true}
               type="submit"
