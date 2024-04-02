@@ -118,7 +118,7 @@ const LoginPage = () => {
               Login
             </Button>
             <Typography component="p" fontWeight={300}>
-              Don&apos;t  account? <Link href="/register">Create an account</Link>
+              Don&apos;t have an account? <Link href="/register">Create an account</Link>
             </Typography>
             </PHForm>
 
