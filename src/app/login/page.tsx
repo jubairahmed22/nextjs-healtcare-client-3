@@ -70,7 +70,7 @@ const LoginPage = () => {
               src={assets.svgs.logo}
               width={50}
               height={50}
-              alt="log"
+              alt="logo"
             ></Image>
             <Box>
               <Typography variant="h6" fontWeight={600}>
