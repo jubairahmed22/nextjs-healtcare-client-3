@@ -10,7 +10,7 @@ type TInputProps = {
     fullWidth?: boolean;
 }
 
-const PHInput = ({name, label, type, size, fullWidth} : TInputProps) => {
+const PHInput = ({name, label, type = "text", size="small", fullWidth} : TInputProps) => {
 
     const {control} = useFormContext()
     return (
