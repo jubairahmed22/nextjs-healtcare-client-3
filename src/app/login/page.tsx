@@ -74,7 +74,7 @@ const LoginPage = () => {
             ></Image>
             <Box>
               <Typography variant="h6" fontWeight={600}>
-                Patient Login
+                Patien Login
               </Typography>
             </Box>
           </Stack>
