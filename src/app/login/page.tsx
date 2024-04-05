@@ -69,7 +69,7 @@ const LoginPage = () => {
             <Image
               src={assets.svgs.logo}
               width={50}
-              height={20}
+              height={50}
               alt="logo"
             ></Image>
             <Box>
