@@ -6,7 +6,7 @@ type TInputProps = {
     name : string;
     label?: string;
     type?: string; 
-    size?: "small" | "medium";
+    size?: "small" | "mediu";
     fullWidth?: boolean;
 }
 
