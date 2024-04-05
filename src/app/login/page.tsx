@@ -73,7 +73,7 @@ const LoginPage = () => {
               alt="logo"
             ></Image>
             <Box>
-              <Typography variant="h1" fontWeight={100}>
+              <Typography variant="h6" fontWeight={100}>
                 Patient Login
               </Typography>
             </Box>
