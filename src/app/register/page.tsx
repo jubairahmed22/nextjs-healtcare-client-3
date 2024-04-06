@@ -20,6 +20,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { userLogin } from "@/services/actions/userLogin";
 import { storeUserInfo } from "@/services/auth.services";
+import PHForm from "@/components/Forms/PHForm";
 
 
 interface IPatientData{
@@ -109,7 +110,7 @@ const registerPage = () => {
               </Box>
             </Stack>
             <Box>
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <PHForm onSubmit={handleSubmit(onSubmit)}>
               <Grid container spacing={2} my={1}>
                 <Grid item md={12}>
                   <TextField
@@ -174,7 +175,7 @@ const registerPage = () => {
               <Typography component="p" fontWeight={300}>
                 Do you already have an account? <Link href="/login">Login</Link>
                </Typography>
-              </form>
+              </PHForm>
             </Box>
           </Box>
         </Stack>
