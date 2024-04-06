@@ -4,7 +4,7 @@ type TFormConfig = {
     resolver?:any
 }
 
-type TFormProps = {
+type TFormProp = {
     children : React.ReactNode;
     onSubmit : SubmitHandler<FieldValues>;
 } & TFormConfig;
