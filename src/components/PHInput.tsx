@@ -26,7 +26,7 @@ const PHInput = ({name,sx, required,label, type = "text", size="small", fullWidt
           sx={{ ...sx }}
           label={label}
           type={type}
-          variant="outline"
+          variant="outlined"
           size={size}
           fullWidth={fullWidth}
           placeholder={label}
