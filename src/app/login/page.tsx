@@ -86,8 +86,13 @@ const LoginPage = () => {
           </Stack>
           <Box>
           <PHForm onSubmit={handleLogin} 
-          resolver={zodResolver(validationSchema)}>
-
+          resolver={zodResolver(validationSchema)}
+          defaultValues={{
+            email: "",
+            password: ""
+          }}
+          >
+          
               <Grid container spacing={2} my={1}>
                
                 <Grid item md={6}>
