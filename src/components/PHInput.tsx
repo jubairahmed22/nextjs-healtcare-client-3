@@ -32,6 +32,7 @@ const PHInput = ({name,sx, required,label, type = "text", size="small", fullWidt
           placeholder={label}
           required={required}
           error={!!error?.message}
+          helperText={error?.message}
           />
         )}
       />
