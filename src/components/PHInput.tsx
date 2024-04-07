@@ -10,7 +10,7 @@ type TInputProps = {
     fullWidth?: boolean;
     sx?: SxProps;
     placeholder ?: string;
-    required: boolean;
+    required?: boolean;
 }
 
 const PHInput = ({name,sx, required,label, type = "text", size="small", fullWidth} : TInputProps) => {
