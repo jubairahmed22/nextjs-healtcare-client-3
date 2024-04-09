@@ -2,7 +2,7 @@
 const DoctorPage = () => {
     return (
         <div>
-            <h1>Doctor page </h1>
+            <h1>Doctor dashboard page </h1>
         </div>
     );
 };
