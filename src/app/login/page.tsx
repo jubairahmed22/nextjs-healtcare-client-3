@@ -43,7 +43,6 @@ const LoginPage = () => {
       }
       else {
        setError(res.message);
-       console.log(res);
       }      
     }
     catch (err: any) {
