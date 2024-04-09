@@ -50,7 +50,7 @@ const SideBar = () => {
             component={Link}
             href="/"
             >
-            <Image src={assets.svgs.logo} width={40} height={40} alt=""></Image>
+            <Image src={assets.svgs.logo} width={10} height={40} alt=""></Image>
             <Typography variant="h6" component="h1" sx={{
                 cursor: "pointer"
             }}>
