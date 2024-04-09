@@ -41,7 +41,7 @@ const SideBar = () => {
             <Stack 
             sx={{
                 py:1,
-                mt:5
+                mt:1
             }}
             direction="row"
             justifyContent="center"
