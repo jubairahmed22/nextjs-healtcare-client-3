@@ -1,3 +1,4 @@
+import { IMeta } from '@/types'
 import { createApi } from '@reduxjs/toolkit/query'
 import type { BaseQueryFn } from '@reduxjs/toolkit/query'
 import axios from 'axios'
@@ -12,7 +13,8 @@ export const axiosBaseQuery =
       method?: AxiosRequestConfig['method']
       data?: AxiosRequestConfig['data']
       params?: AxiosRequestConfig['params']
-      headers?: AxiosRequestConfig['headers']
+      headers?: AxiosRequestConfig['headers'];
+      meta?: IMeta
     },
     unknown,
     unknown
