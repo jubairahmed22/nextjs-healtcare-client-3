@@ -1,13 +1,13 @@
-import { Box, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar } from "@mui/material";
+import { Box, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, Toolbar, Typography } from "@mui/material";
 import MailIcon from '@mui/icons-material/Mail';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
+import Image from "next/image";
+import assets from '@/assets';
 
 const SideBar = () => {
     const drawer = (
         <div>
-          <Toolbar />
-          <Divider />
-          <List>
+            <List>
             {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton>
@@ -37,7 +37,22 @@ const SideBar = () => {
       );
     return (
         <Box>
-            
+            <Stack 
+            sx={{
+                py:1,
+                mt:1
+            }}
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            gap={1}
+            >
+            <Image src={assets.svgs.logo} width={40} height={40} alt=""></Image>
+            <Typography variant="h6" component="h1">
+                PH Health Care
+            </Typography>
+            </Stack>
+            {drawer}
         </Box>
     );
 };
