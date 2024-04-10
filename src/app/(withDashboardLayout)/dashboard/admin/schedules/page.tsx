@@ -1,5 +1,5 @@
 
-const schedulesPage = () => {
+const SchedulesPage = () => {
     return (
         <div>
             this is schedules
@@ -7,4 +7,4 @@ const schedulesPage = () => {
     );
 };
 
-export default schedulesPage;
+export default SchedulesPage;
