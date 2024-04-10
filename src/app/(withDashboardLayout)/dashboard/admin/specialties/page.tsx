@@ -1,5 +1,5 @@
 
-const specialties = () => {
+const specialtiesPage = () => {
     return (
         <div>
              this is specialties
@@ -7,4 +7,4 @@ const specialties = () => {
     );
 };
 
-export default specialties;
+export default specialtiesPage;
