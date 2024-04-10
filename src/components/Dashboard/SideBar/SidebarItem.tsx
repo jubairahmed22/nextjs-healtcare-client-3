@@ -20,7 +20,9 @@ const SidebarItem = ({ item, index }: IProps) => {
       <ListItem disablePadding>
         <ListItemButton>
           <ListItemIcon>
-            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            {
+                item.icon && <item.icon/>
+            }
           </ListItemIcon>
           <ListItemText primary={item.title} />
         </ListItemButton>
