@@ -22,7 +22,7 @@ const SideBar = () => {
         <Box>
             <Stack 
             sx={{
-                py:4,
+                py:1,
                 mt:1
             }}
             direction="row"
