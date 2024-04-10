@@ -36,7 +36,7 @@ const SideBar = () => {
             <Typography variant="h6" component="h1" sx={{
                 cursor: "pointer"
             }}>
-                PH Health Care
+                PH Health 
             </Typography>
             </Stack>
             <List>
