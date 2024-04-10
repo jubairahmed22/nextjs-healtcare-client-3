@@ -14,9 +14,12 @@ type IProps = {
   index: number;
 };
 
-const SidebarItem = ({ item, index }: IProps) => {
+const SidebarItem = ({ item }: IProps) => {
+
+  const linkPath = `/dashboard/${item.path}`;
+
   return (
-    <Link href="/">
+    <Link href={linkPath}>
       <ListItem disablePadding>
         <ListItemButton>
           <ListItemIcon>
