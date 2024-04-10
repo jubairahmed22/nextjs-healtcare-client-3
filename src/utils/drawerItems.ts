@@ -13,6 +13,7 @@ export const drawerItems = (role : UserRole) : DrawerItem[] => {
             path: `${role}`,
             icon: DashboardIcon
         })
+        break;
    }
 
 
