@@ -2,7 +2,7 @@
 const SpecialtiesPage = () => {
     return (
         <div>
-             this is 
+             this is specialties
         </div>
     );
 };
