@@ -2,7 +2,7 @@
 const SchedulesPage = () => {
     return (
         <div>
-            this 
+            this is schedules
         </div>
     );
 };
