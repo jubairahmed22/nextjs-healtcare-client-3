@@ -1,3 +1,4 @@
+import PHModal from "@/components/Shared/PHModal/PHModal";
 import { Box, Button, Stack, TextField } from "@mui/material";
 
 const SpecialtiesPage = () => {
@@ -7,6 +8,7 @@ const SpecialtiesPage = () => {
                 <Button>
                     Create Specialty
                 </Button>
+                <PHModal></PHModal>
                 <TextField size="small" placeholder="Search Specialist"></TextField>
             </Stack>
         </Box>
