@@ -1,6 +1,7 @@
 import { authKay } from "@/contants/authkey";
 import { ResponseSuccessType } from "@/types";
 import { getFromLocalStorage } from "@/utils/local-storage";
+import { formatProdErrorMessage } from "@reduxjs/toolkit";
 import axios from "axios";
 
 
@@ -40,7 +41,8 @@ instance.interceptors.response.use(
     // Do something with response error
     const responseObject = {
        statusCode: error?.response?.data?.statusCode || 500,
-       message: error?.response?.data?.message || "Something went wrong!!"
+       message: error?.response?.data?.message || "Something went wrong!!",
+       errorMessages: error?.response?.data?.message
     };
     return Promise.reject(error);
   });
