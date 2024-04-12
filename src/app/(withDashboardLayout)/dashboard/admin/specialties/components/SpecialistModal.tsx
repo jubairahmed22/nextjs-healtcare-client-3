@@ -1,7 +1,8 @@
+import PHFileUploader from "@/components/Forms/PHFileUploader";
 import PHForm from "@/components/Forms/PHForm";
-import PHInput from "@/components/PHInput";
+import PHInput from "@/components/Forms/PHInput";
 import PHModal from "@/components/Shared/PHModal/PHModal";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { FieldValues } from "react-hook-form";
 
 type TProps = {
@@ -17,10 +18,18 @@ const SpecialistModal = ({open, setOpen} : TProps) => {
     return (
         <PHModal open={open} setOpen={setOpen} title="Create A New Specialty">
             <PHForm onSubmit={handleFormSubmit}>
-                     <Grid container spacing={2}>
+                    <Grid container spacing={2}>
+                    <Grid item spacing={6}>
                           <PHInput name="title" label="Title">
                           </PHInput>
                      </Grid>
+                     <Grid item spacing={6}>
+                         <PHFileUploader></PHFileUploader>
+                     </Grid>
+                    </Grid>
+                    <Button sx={{mt:1}} type="submit">
+                        Create
+                    </Button>
             </PHForm>
         </PHModal>
     );

@@ -20,7 +20,7 @@ import { toast } from "sonner";
 import { userLogin } from "@/services/actions/userLogin";
 import { storeUserInfo } from "@/services/auth.services";
 import PHForm from "@/components/Forms/PHForm";
-import PHInput from "@/components/PHInput";
+import PHInput from "@/components/Forms/PHInput";
 import { useRouter } from "next/navigation";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";

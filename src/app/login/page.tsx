@@ -17,7 +17,7 @@ import { storeUserInfo } from "@/services/auth.services";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import PHForm from "@/components/Forms/PHForm";
-import PHInput from "@/components/PHInput";
+import PHInput from "@/components/Forms/PHInput";
 import { z } from "zod";
 import { Password } from "@mui/icons-material";
 import { zodResolver } from "@hookform/resolvers/zod";
