@@ -2,7 +2,7 @@
 const ReviewsPage = () => {
     return (
         <div>
-            This is reviews
+            This is 
         </div>
     );
 };
