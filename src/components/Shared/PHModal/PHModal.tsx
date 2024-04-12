@@ -25,7 +25,7 @@ export default function PHModal() {
   const handleClickOpen = () => {
     setOpen(true);
   };
-  const handle = () => {
+  const handleClose = () => {
     setOpen(false);
   };
 
