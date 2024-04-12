@@ -22,7 +22,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 export default function PHModal() {
   const [open, setOpen] = React.useState(false);
 
-  const handleClick = () => {
+  const handleClickOpen = () => {
     setOpen(true);
   };
   const handleClose = () => {
