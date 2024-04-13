@@ -10,7 +10,7 @@ const specialtiesApi = baseApi.injectEndpoints({
         contentType: "multiple/form-data",
         data, 
       }),
-
+    invalidatesTags:[tagTypes.specialties]
     }),
     getAllSpecialties: build.query({
         query: (data) => ({
