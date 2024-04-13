@@ -16,8 +16,8 @@ const specialtiesApi = baseApi.injectEndpoints({
           url: "/specialties",
           method: "GET"
         }),
-       }),
+    }),
   }),
 })
 
-export const { useCreateSpecialtyMutation } = specialtiesApi
+export const { useCreateSpecialtyMutation, useGetAllSpecialtiesQuery } = specialtiesApi
