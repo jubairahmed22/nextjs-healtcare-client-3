@@ -17,6 +17,13 @@ const SpecialtyModal = ({open, setOpen} : TProps) => {
     const handleFormSubmit = (values: FieldValues) => {
         
         const data = modifyPayload(values);
+        try {
+
+        }
+        catch (err : any) {
+            console.log(err.message);
+            
+        }
     };
 
     return (
