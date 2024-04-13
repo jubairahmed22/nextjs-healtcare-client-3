@@ -9,8 +9,14 @@ const specialtiesApi = baseApi.injectEndpoints({
         contentType: "multiple/form-data",
         data, 
       }),
-      
+
     }),
+    getAllSpecialties: build.query({
+        query: (data) => ({
+          url: "/specialties",
+          method: "GET"
+        }),
+       }),
   }),
 })
 
