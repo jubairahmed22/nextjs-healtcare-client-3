@@ -2,9 +2,11 @@ import PHFileUploader from "@/components/Forms/PHFileUploader";
 import PHForm from "@/components/Forms/PHForm";
 import PHInput from "@/components/Forms/PHInput";
 import PHModal from "@/components/Shared/PHModal/PHModal";
+import { useCreateSpecialtyMutation } from "@/redux/api/specialtiesApi";
 import { modifyPayload } from "@/utils/modifyPayload";
 import { Button, Grid } from "@mui/material";
 import { FieldValues } from "react-hook-form";
+import { toast } from "sonner";
 
 type TProps = {
    open: boolean;
@@ -13,12 +15,17 @@ type TProps = {
 
 
 const SpecialtyModal = ({open, setOpen} : TProps) => {
+const [createSpecialty] = useCreateSpecialtyMutation();
 
-    const handleFormSubmit = (values: FieldValues) => {
+    const handleFormSubmit = async (values: FieldValues) => {
         
         const data = modifyPayload(values);
         try {
-
+          const res = await createSpecialty(data).unwrap();
+          if(res?.id){
+            toast.success("Specialty created successfully");
+            setOpen(false);
+          }          
         }
         catch (err : any) {
             console.log(err.message);
