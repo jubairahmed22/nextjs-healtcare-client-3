@@ -4,6 +4,7 @@ import { useState } from "react";
 import SpecialtyModal from "./components/SpecialtyModal";
 import { useGetAllSpecialtiesQuery } from "@/redux/api/specialtiesApi";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import Image from "next/image";
 
 const SpecialtiesPage = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -11,7 +12,16 @@ const SpecialtiesPage = () => {
   // console.log(data);
 
   const columns: GridColDef[] = [
-    { field: "title", headerName: "Title", width: 70 },
+    { field: "title", headerName: "Title", width: 100 },
+    { field: "icon",
+    headerName: "Icon",
+    width: 100,
+    renderCell:({row})=> {
+    return <Box>
+        <Image src={row.icon} alt="ico" 
+        width={40} height={40}></Image>
+    </Box>
+    } },
   ];
   return (
     <Box>
@@ -32,7 +42,7 @@ const SpecialtiesPage = () => {
         />
       </Box>
          :  <h1>Loading...</h1>
-     }
+       }
     </Box>
   );
 };
