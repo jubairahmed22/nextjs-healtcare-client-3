@@ -53,7 +53,7 @@ export default function DashboardDrawer({children} : {children: React.ReactNode}
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 3, display: { sm: 'none' }, color: "primary.main" }}
+            sx={{ mr: 2, display: { sm: 'none' }, color: "primary.main" }}
           >
             <MenuIcon />
           </IconButton>
