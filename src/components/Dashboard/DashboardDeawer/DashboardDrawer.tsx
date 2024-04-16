@@ -89,7 +89,7 @@ export default function DashboardDrawer({children} : {children: React.ReactNode}
         <SideBar></SideBar>
         </Drawer>
         <Drawer
-          variant="permanent"
+          variant="per"
           sx={{
             display: { xs: 'none', sm: 'block' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
