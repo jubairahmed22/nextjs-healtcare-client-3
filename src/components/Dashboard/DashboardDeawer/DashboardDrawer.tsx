@@ -44,7 +44,7 @@ export default function DashboardDrawer({children} : {children: React.ReactNode}
           ml: { sm: `${drawerWidth}px` },
           background: '#f4f7fe',
           boxShadow: 0,
-          borderBottom: "6px solid light gray"
+          borderBottom: "1px solid light gray"
         }}
       >
         <Toolbar>
