@@ -43,7 +43,7 @@ export default function DashboardDrawer({children} : {children: React.ReactNode}
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
           background: '#f4f7fe',
-          boxShadow: 0,
+          boxShadow: 0s,
           borderBottom: "1px solid light gray"
         }}
       >
