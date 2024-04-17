@@ -62,7 +62,7 @@ export default function DashboardDrawer({children} : {children: React.ReactNode}
             Hi, Jubair Ahmed
           </Typography>
           <Typography variant="body2" noWrap component="div" color="primary.main">
-            Welcome to, PH 
+            Welcome to, PH Health Care!
           </Typography>
           </Box>
         </Toolbar>
