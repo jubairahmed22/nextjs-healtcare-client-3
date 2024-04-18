@@ -31,4 +31,6 @@ export type IGenericErrorMessage = {
     message: string;
 }
 
-export type UserRole = keyof typeof USER_ROLE;
+export const Gender = ["MALE", "FEMALE"];
+
+// export type UserRole = keyof typeof USER_ROLE;
