@@ -48,7 +48,7 @@ type TModalProps = {
         fullScreen
 
       >
-        <DialogTitle sx={{ m: 0, p: 269 }} id="customized-dialog-title">
+        <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
           {title}
         </DialogTitle>
         <IconButton
