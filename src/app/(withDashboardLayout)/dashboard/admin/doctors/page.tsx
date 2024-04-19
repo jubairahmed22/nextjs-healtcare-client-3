@@ -5,13 +5,22 @@ import { useState } from "react";
 import { useGetAllDoctorsQuery } from "@/redux/api/doctorApi";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import DeleteIcon from '@mui/icons-material/Delete';
+import { useDebounced } from "@/redux/hooks";
 
 const DoctorsPage = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const query: Record<string, any> = {};
     const [searchTerm, setSearchTerm] = useState<string>("")
     
-    query["searchTerm"]= searchTerm;
+    const debouncedTerm = useDebounced({
+        searchQuery: searchTerm,
+        delay: 600,
+    });
+
+
+    if(!! debouncedTerm){
+        query["searchTerm"]= searchTerm;
+    }
     
     const {data, isLoading} = useGetAllDoctorsQuery({...query});
     console.log(data);
@@ -22,6 +31,8 @@ const DoctorsPage = () => {
     // console.log(meta);
 
     const handleDelete = async (id: string) =>{
+
+        console.log(id);
         try{
       
         }
