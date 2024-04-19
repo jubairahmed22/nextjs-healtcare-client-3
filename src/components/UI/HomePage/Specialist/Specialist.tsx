@@ -4,7 +4,7 @@ import Image from "next/image";
 const Specialist = async () => {
   const res = await fetch("http://localhost:5000/api/v1/specialties", {
     next: {
-      revalidate: 30,
+      revalidate: 3098,
     },
   });
   const { data: specialties } = await res.json();
