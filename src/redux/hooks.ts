@@ -18,7 +18,11 @@ export const useDebounced = ({searchQuery, delay} : TDebouncedProps) => {
 
     const handler = setTimeout(() => {
         setDebouncedValue(searchQuery);
-    }, delay)
+    }, delay);
+
+    return () => {
+        clearTimeout(handler);
+    }
   }, [searchQuery, delay]);
 
   return debouncedValue;
