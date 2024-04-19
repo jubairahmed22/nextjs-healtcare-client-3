@@ -1,5 +1,7 @@
+import { IMeta } from "@/types";
 import { tagTypes } from "../tag-types"
 import { baseApi } from "./baseApi"
+import { IDoctor } from "@/types/doctor";
 
 const specialtiesApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
@@ -13,11 +15,17 @@ const specialtiesApi = baseApi.injectEndpoints({
     invalidatesTags:[tagTypes.doctor]
     }),
     getAllDoctors: build.query({
-        query: (data) => ({
-          url: "/specialties",
+        query: () => ({
+          url: "/doctor",
           method: "GET"
         }),
-        providesTags:[tagTypes.specialties],
+        transformErrorResponse: (response: IDoctor[], meta: IMeta) => {
+            return {
+                doctors: response,
+                meta
+            };
+        },
+        providesTags:[tagTypes.doctor],
     }),
     deleteSpecialty: build.mutation({
         query: (id) => ({
