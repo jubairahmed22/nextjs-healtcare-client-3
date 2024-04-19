@@ -5,7 +5,7 @@ import PHInput from "@/components/Forms/PHInput";
 import { PHSelectField } from "@/components/Forms/PHSelectField";
 import PHFullScreenModal from "@/components/Shared/PHModal/PHFullScreenModal";
 import PHModal from "@/components/Shared/PHModal/PHModal";
-import { useCreateSpecialtyMutation } from "@/redux/api/specialtiesApi";
+import { useCreateDoctorMutation } from "@/redux/api/doctorApi";
 import { Gender } from "@/types";
 import { modifyPayload } from "@/utils/modifyPayload";
 import { Button, Grid } from "@mui/material";
@@ -19,15 +19,22 @@ type TProps = {
 
 
 const DoctorModal = ({open, setOpen} : TProps) => {
-const [createSpecialty] = useCreateSpecialtyMutation();
+const [createDoctor] = useCreateDoctorMutation();
 
     const handleFormSubmit = async (values: FieldValues) => {
         
-        const data = modifyPayload(values);
+    values.doctor.experience = Number(values.doctor.experience);
+    values.doctor.apointmentFee = Number(values.doctor.apointmentFee);
+    const data = modifyPayload(values);
+      //   console.log(values);
+      
+        
         try {
-          const res = await createSpecialty(data).unwrap();
+          const res = await createDoctor(data).unwrap();
+          console.log(res);
+
           if(res?.id){
-            toast.success("Specialty created successfully");
+            toast.success("Doctor created successfully");
             setOpen(false);
           }          
         }
@@ -121,7 +128,7 @@ const [createSpecialty] = useCreateSpecialtyMutation();
                     <PHSelectField 
                     items={Gender}
                     name="doctor.gender"
-                    label="Registration Number"
+                    label="Gender"
                     fullWidth={true}
                     sx={{mb:2}}
                     />
@@ -135,7 +142,41 @@ const [createSpecialty] = useCreateSpecialtyMutation();
                     sx={{mb:2}}
                     />
                  </Grid>
+                   <Grid item xs={12} sm={12} md={4}>
+                    <PHInput 
+                    name="doctor.qualification"
+                    type="text"
+                    label="Qualification"
+                    fullWidth={true}
+                    sx={{mb:2}}
+                    />
+                 </Grid>
+                   <Grid item xs={12} sm={12} md={4}>
+                    <PHInput 
+                    name="doctor.currentWorkingPlace"
+                    type="text"
+                    label="Current Working Place"
+                    fullWidth={true}
+                    sx={{mb:2}}
+                    />
+                 </Grid>
+                   <Grid item xs={12} sm={12} md={4}>
+                    <PHInput 
+                    name="doctor.designation"
+                    type="text"
+                    label="Designation"
+                    fullWidth={true}
+                    sx={{mb:2}}
+                    />
+                 </Grid>
                </Grid>
+               <Button sx={{
+                margin: "10px 0px"
+              }}  
+              type="submit"
+              >
+                Create
+              </Button>
             </PHForm>
         </PHFullScreenModal>
     );
