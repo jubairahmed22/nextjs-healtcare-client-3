@@ -11,7 +11,7 @@ export interface IDoctor {
     qualification: string;
     currentWorkingPlace: string;
     designation: string;
-    specialties?: ISpecialties[];
+    specialties?: ISpecialties[] ;
 }
 
 export interface ISpecialties {
