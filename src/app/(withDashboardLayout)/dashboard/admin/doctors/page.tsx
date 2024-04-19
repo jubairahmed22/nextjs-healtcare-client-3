@@ -8,13 +8,17 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 const DoctorsPage = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const query: Record<string, any> = {};
+    const [searchTerm, setSearchTerm] = useState<string>("")
     
-    const {data, isLoading} = useGetAllDoctorsQuery({});
+    query["searchTerm"]= searchTerm;
+    
+    const {data, isLoading} = useGetAllDoctorsQuery({...query});
     console.log(data);
     const doctors = data?.doctors;
     const meta = data?.meta;
 
-    console.log(doctors);
+    // console.log(doctors);
     // console.log(meta);
 
     const handleDelete = async (id: string) =>{
@@ -31,6 +35,8 @@ const DoctorsPage = () => {
         { field: "name", headerName: "Name", flex:1 },
         { field: "email", headerName: "Email", flex:1 },
         { field: "contactNumber", headerName: "Contact Number", flex:1 },
+        { field: "gender", headerName: "Gender", flex:1 },
+        { field: "apointmentFee", headerName: "Appointment Fee", flex:1 },
         { field: "action",
         headerName: "Action",
         flex: 1,
@@ -49,7 +55,7 @@ const DoctorsPage = () => {
             <Stack direction="row" justifyContent="space-between" alignItems="center">
                 <Button onClick={()=>setIsModalOpen(true)}>Create New Doctor</Button>
                 <DoctorModal open={isModalOpen} setOpen={setIsModalOpen}></DoctorModal>
-                <TextField size="small" placeholder="search doctors"></TextField>
+                <TextField onChange={(e)=> setSearchTerm(e.target.value)} size="small" placeholder="search doctors"></TextField>
             </Stack>
             {
         !isLoading ?
