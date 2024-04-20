@@ -37,8 +37,8 @@ const SpecialtiesPage = () => {
     flex:1,
     renderCell:({row})=> {
     return (<Box>
-        <Image src={row.icon} alt="icon"
-         width={30} height={30}></Image>
+        {/* <Image src={row.icon} alt="icon"
+         width={30} height={30}></Image> */}
     </Box>);
     }},
     { field: "action",

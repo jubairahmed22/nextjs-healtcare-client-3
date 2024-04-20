@@ -43,12 +43,12 @@ import {
               <Grid item key={doctor.id} md={4}>
                 <Card>
                   <Box>
-                    <Image
+                    {/* <Image
                       src={doctor.profilePhoto}
                       alt="doctor"
                       width={500}
                       height={100}
-                    />
+                    /> */}
                   </Box>
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
