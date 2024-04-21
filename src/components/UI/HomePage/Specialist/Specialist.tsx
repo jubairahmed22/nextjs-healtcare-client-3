@@ -42,7 +42,7 @@ const Specialist = async () => {
                 textAlign: "center",
                 padding: "40px 10px",
                 "& img": {
-                  width: "5099px",
+                  width: "50px",
                   height: "50px",
                   margin: "0 auto",
                 },
