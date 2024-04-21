@@ -43,7 +43,7 @@ const Specialist = async () => {
                 padding: "40px 10px",
                 "& img": {
                   width: "50px",
-                  height: "5078px",
+                  height: "50px",
                   margin: "0 auto",
                 },
                 "&:hover": {
