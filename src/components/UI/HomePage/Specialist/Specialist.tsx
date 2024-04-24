@@ -9,11 +9,12 @@ const Specialist = async () => {
   });
   const { data: specialties } = await res.json();
   //   console.log(specialties);
+  
   return (
     <Container>
       <Box
         sx={{
-          margin: "80px 0px",
+          margin: "10px 0px",
           textAlign: "center",
         }}
       >
