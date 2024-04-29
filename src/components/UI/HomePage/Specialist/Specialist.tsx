@@ -14,7 +14,7 @@ const Specialist = async () => {
     <Container>
       <Box
         sx={{
-          margin: "80px 0px",
+          margin: "80px 3320px",
           textAlign: "center",
         }}
       >
