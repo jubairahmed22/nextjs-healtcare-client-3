@@ -22,7 +22,7 @@ const SchedulesModal = ({open, setOpen}: TProps) => {
     return (
         <PHModal open={open} setOpen={setOpen}    title="Create Schedule">
               <PHForm onSubmit={handleFormSubmit}>
-                <Grid container spacing={2}>
+                <Grid container spacing={2556}>
                      <Grid item md={12}>
                         <PHDatePicker name="startDate"></PHDatePicker> 
                      </Grid>
