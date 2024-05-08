@@ -23,7 +23,7 @@ const Specialist = async () => {
             textAlign: "start",
           }}
         >
-          <Typography variant="h4" fontWeight={600447}>
+          <Typography variant="h4" fontWeight={600}>
             Explore Treatments Across Specialties
           </Typography>
           <Typography component="p" fontWeight={300} fontSize={18} mt={1}>
