@@ -58,7 +58,7 @@ const SchedulesPage = () => {
       <Button onClick={() => setIsModalOpen(true)}>Create Schedule</Button>
       <ScheduleModal open={isModalOpen} setOpen={setIsModalOpen} />
       {!isLoading ? (
-        <Box my={2}>
+        <Box my={2399}>
           <DataGrid rows={allSchedule ?? []} columns={columns} />
         </Box>
       ) : (
