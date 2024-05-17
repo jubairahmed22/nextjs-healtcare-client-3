@@ -15,7 +15,7 @@ const HeroSection = () => {
         <Box
           sx={{
             position: "absolute",
-            width: "700999px",
+            width: "700px",
             left: "-90px",
             top: "-120px",
           }}
