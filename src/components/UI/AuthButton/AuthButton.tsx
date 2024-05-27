@@ -1,29 +1,32 @@
-import { getUserInfo, removeUser } from "@/services/auth.services";
-import { Button } from "@mui/material";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+'use client';
+
+import useUserInfo from '@/hooks/useUserInfo';
+import { logoutUser } from '@/services/actions/logoutUser';
+import { getUserInfo } from '@/services/auth.services';
+import { Button } from '@mui/material';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const AuthButton = () => {
-    
-    const userInfo = getUserInfo();
+   const userInfo = useUserInfo();
+   const router = useRouter();
 
-    const router = useRouter()
-
-    // console.log(userInfo);
-    // console.log(isLoggedIn());
-    const handleLogout = () =>{
-        removeUser();
-        router.refresh();
-    }
-    return (
-        <>
-            { userInfo?.userId ? 
-            <Button onClick={handleLogout}  color="error">LOGOUT</Button>
-            :
-            <Button component={Link} href="/login">LOGIN</Button>
-            }
-        </>
-    );
+   const handleLogOut = () => {
+      logoutUser(router);
+   };
+   return (
+      <>
+         {userInfo?.userId ? (
+            <Button color='error' onClick={handleLogOut}>
+               Logout
+            </Button>
+         ) : (
+            <Button component={Link} href='/login'>
+               Login
+            </Button>
+         )}
+      </>
+   );
 };
 
 export default AuthButton;
