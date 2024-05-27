@@ -6,8 +6,7 @@ import type { NextRequest } from 'next/server';
 type Role = keyof typeof roleBasedPrivateRoutes;
 
 const AuthRoutes = ['/login', '/register'];
-const commonPrivateRoutes = ['/dashboard'];
-// '/dashboard/change-password'
+const commonPrivateRoutes = ['/dashboard', '/dashboard/change-password'];
 const roleBasedPrivateRoutes = {
    PATIENT: [/^\/dashboard\/patient/],
    DOCTOR: [/^\/dashboard\/doctor/],
